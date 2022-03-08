@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -46,6 +46,14 @@ class ViewController: UIViewController {
         passwordTextField.text = ""
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loginTextField.delegate = self
+        passwordTextField.delegate = self
+        passwordTextField.returnKeyType = UIReturnKeyType.done
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let transition = segue.destination as? GreetingViewController else { return }
         
@@ -54,7 +62,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.view.endEditing(true)
+        self.view.endEditing(true)
     }
     
     func loginAndPasswordAlert() {
@@ -64,6 +72,15 @@ class ViewController: UIViewController {
         alert.addAction(okButton)
         
         present(alert, animated: true, completion: nil)
+        passwordTextField.text = ""
+    }
+}
+extension ViewController: UITextViewDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        passwordTextField.becomeFirstResponder()
+        
+        return true
     }
 }
 
