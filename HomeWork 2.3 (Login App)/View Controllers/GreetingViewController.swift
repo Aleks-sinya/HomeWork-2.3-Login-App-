@@ -26,6 +26,16 @@ class GreetingViewController: UIViewController {
         alpha: 1
     )
     
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openGreetingVC" {
+            let tabBarController = segue.destination as! UITabBarController
+            let greetingVC = tabBarController.viewControllers?.first as! GreetingViewController
+            greetingVC.user = user
+        }
+    }
+    
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)

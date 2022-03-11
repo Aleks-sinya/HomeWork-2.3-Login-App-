@@ -14,6 +14,7 @@
 		A155F44827D7376A00F3CC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A155F44727D7376A00F3CC04 /* Assets.xcassets */; };
 		A155F44B27D7376A00F3CC04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A155F44927D7376A00F3CC04 /* LaunchScreen.storyboard */; };
 		A155F45327D741C200F3CC04 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F45227D741C200F3CC04 /* GreetingViewController.swift */; };
+		A1E2EC2327DB8FCC00F2C8C5 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E2EC2227DB8FCC00F2C8C5 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A155F44A27D7376A00F3CC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A155F44C27D7376A00F3CC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A155F45227D741C200F3CC04 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		A1E2EC2227DB8FCC00F2C8C5 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,57 @@
 		A155F43D27D7376800F3CC04 /* HomeWork 2.3 (Login App) */ = {
 			isa = PBXGroup;
 			children = (
-				A155F43E27D7376800F3CC04 /* AppDelegate.swift */,
-				A155F44027D7376800F3CC04 /* SceneDelegate.swift */,
-				A155F44227D7376800F3CC04 /* LoginViewController.swift */,
-				A155F44427D7376800F3CC04 /* Main.storyboard */,
-				A155F45227D741C200F3CC04 /* GreetingViewController.swift */,
-				A155F44727D7376A00F3CC04 /* Assets.xcassets */,
-				A155F44927D7376A00F3CC04 /* LaunchScreen.storyboard */,
-				A155F44C27D7376A00F3CC04 /* Info.plist */,
+				A1E2EC1D27DB80B900F2C8C5 /* View Controllers */,
+				A1E2EC2127DB81E600F2C8C5 /* Models */,
+				A1E2EC2027DB817600F2C8C5 /* Storyboards */,
+				A1E2EC1F27DB814500F2C8C5 /* Resources */,
+				A1E2EC1E27DB810A00F2C8C5 /* App */,
 			);
 			path = "HomeWork 2.3 (Login App)";
+			sourceTree = "<group>";
+		};
+		A1E2EC1D27DB80B900F2C8C5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A155F44227D7376800F3CC04 /* LoginViewController.swift */,
+				A155F45227D741C200F3CC04 /* GreetingViewController.swift */,
+				A1E2EC2227DB8FCC00F2C8C5 /* UserInfoViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A1E2EC1E27DB810A00F2C8C5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A155F43E27D7376800F3CC04 /* AppDelegate.swift */,
+				A155F44027D7376800F3CC04 /* SceneDelegate.swift */,
+				A155F44C27D7376A00F3CC04 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1E2EC1F27DB814500F2C8C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A155F44727D7376A00F3CC04 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1E2EC2027DB817600F2C8C5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A155F44427D7376800F3CC04 /* Main.storyboard */,
+				A155F44927D7376A00F3CC04 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A1E2EC2127DB81E600F2C8C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +186,7 @@
 			files = (
 				A155F44327D7376800F3CC04 /* LoginViewController.swift in Sources */,
 				A155F43F27D7376800F3CC04 /* AppDelegate.swift in Sources */,
+				A1E2EC2327DB8FCC00F2C8C5 /* UserInfoViewController.swift in Sources */,
 				A155F44127D7376800F3CC04 /* SceneDelegate.swift in Sources */,
 				A155F45327D741C200F3CC04 /* GreetingViewController.swift in Sources */,
 			);
@@ -295,7 +339,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5R2XG222B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HomeWork 2.3 (Login App)/Info.plist";
+				INFOPLIST_FILE = "HomeWork 2.3 (Login App)/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5R2XG222B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HomeWork 2.3 (Login App)/Info.plist";
+				INFOPLIST_FILE = "HomeWork 2.3 (Login App)/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
