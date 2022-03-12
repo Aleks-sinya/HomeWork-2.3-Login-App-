@@ -167,57 +167,107 @@
             </objects>
             <point key="canvasLocation" x="773" y="83"/>
         </scene>
-        <!--Aleksei Siniagovskii-->
+        <!--About Me View Controller-->
         <scene sceneID="gh3-eV-QJA">
             <objects>
-                <viewController id="V8P-oF-kWq" customClass="UserInfoViewController" customModule="HomeWork_2_3__Login_App_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V8P-oF-kWq" customClass="AboutMeViewController" customModule="HomeWork_2_3__Login_App_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDJ-wV-nt7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5lq-6I-elt">
-                                <rect key="frame" x="16" y="44" width="288" height="475"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61J-Co-0nd">
+                                <rect key="frame" x="-4" y="24" width="328" height="496"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5lq-6I-elt">
+                                        <rect key="frame" x="20" y="20" width="288" height="456"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <mutableString key="text">Hello, my name is Alexey! I'm 28 years old. I'm from Barnaul, it's a small city in Siberia. Yes, it’s very cold here) I work for myself, we can say that we have a family business in the field of metrology, and to be more specific, this is more connected with heat energy meters. In fact, I am an engineer who manages a business, and in my free time I practice and at the same time teach the most difficult language in the world, this is Chinese. I really like teaching, because at this very moment you realize that you are helping people achieve certain goals and help a dream come true.
+I have been to China many times. Lived there, studied, worked.
+I learned Chinese because I am a very stubborn and purposeful person, so I decided to master the profession of a developer. Well, I chose the direction, because I really like the Apple company, its policy and, of course, devices.
+I love to travel very much, I have visited many countries of this world and it is impossible to say where it was best!
+I do a lot of reading books. Mostly I like literature about financial literacy.
+Another hobby of mine is, of course, sports, I won’t say that I am an athlete with gold medals, but I keep my body in good shape. </mutableString>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5lq-6I-elt" firstAttribute="bottom" secondItem="TFt-Z4-Q2S" secondAttribute="bottom" id="9d9-vz-TQF"/>
+                                    <constraint firstItem="5lq-6I-elt" firstAttribute="centerY" secondItem="61J-Co-0nd" secondAttribute="centerY" id="AlA-aF-60W"/>
+                                    <constraint firstItem="5lq-6I-elt" firstAttribute="leading" secondItem="TFt-Z4-Q2S" secondAttribute="leading" constant="20" id="B4H-uO-CUV"/>
+                                    <constraint firstAttribute="bottom" secondItem="5lq-6I-elt" secondAttribute="bottom" id="GZh-OW-CVh"/>
+                                    <constraint firstAttribute="trailing" secondItem="5lq-6I-elt" secondAttribute="trailing" constant="20" id="PLl-cv-uhO"/>
+                                    <constraint firstItem="5lq-6I-elt" firstAttribute="centerX" secondItem="61J-Co-0nd" secondAttribute="centerX" id="i5c-fI-nxa"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="KMi-u5-aHv"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="TFt-Z4-Q2S"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H2M-XE-s6g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5lq-6I-elt" firstAttribute="bottom" secondItem="H2M-XE-s6g" secondAttribute="bottom" id="CNc-1K-VFX"/>
-                            <constraint firstItem="5lq-6I-elt" firstAttribute="leading" secondItem="H2M-XE-s6g" secondAttribute="leading" constant="16" id="Phq-Pb-fld"/>
-                            <constraint firstItem="H2M-XE-s6g" firstAttribute="trailing" secondItem="5lq-6I-elt" secondAttribute="trailing" constant="16" id="gJe-tG-jqH"/>
-                            <constraint firstItem="5lq-6I-elt" firstAttribute="top" secondItem="H2M-XE-s6g" secondAttribute="top" id="sj2-DX-iWJ"/>
+                            <constraint firstItem="61J-Co-0nd" firstAttribute="leading" secondItem="dDJ-wV-nt7" secondAttribute="leadingMargin" constant="-20" id="YWP-AP-QKp"/>
+                            <constraint firstItem="61J-Co-0nd" firstAttribute="top" secondItem="dDJ-wV-nt7" secondAttribute="topMargin" constant="-20" id="ghW-wZ-WiY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="61J-Co-0nd" secondAttribute="bottom" constant="-1" id="nHh-OT-aeR"/>
+                            <constraint firstItem="61J-Co-0nd" firstAttribute="centerX" secondItem="dDJ-wV-nt7" secondAttribute="centerX" id="pVC-Af-zHO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Aleksei Siniagovskii" id="gM8-Ah-zUl">
+                    <navigationItem key="navigationItem" id="gM8-Ah-zUl">
                         <barButtonItem key="rightBarButtonItem" title="More info" id="Znt-h1-IkJ">
                             <connections>
                                 <segue destination="g8T-lu-LiQ" kind="show" id="fwL-Vc-cZG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="5lq-6I-elt" id="hXC-OH-m4D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Itg-e0-ktz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="881"/>
+            <point key="canvasLocation" x="1537.5" y="880.9859154929577"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Nij-GS-3TW">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2X1-yb-oah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="g8T-lu-LiQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PM5-lu-PAg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPhotoOne" translatesAutoresizingMaskIntoConstraints="NO" id="94Q-af-7rc">
+                                <rect key="frame" x="40" y="44" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ZYO-5i-Zbg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPhotoTwo" translatesAutoresizingMaskIntoConstraints="NO" id="Qig-fz-GcQ">
+                                <rect key="frame" x="40" y="196" width="240" height="176"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPhotoThree" translatesAutoresizingMaskIntoConstraints="NO" id="VuL-eS-HQb">
+                                <rect key="frame" x="40" y="396" width="240" height="123"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sar-Rj-BA4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VuL-eS-HQb" firstAttribute="bottom" secondItem="sar-Rj-BA4" secondAttribute="bottom" id="7jT-OG-AvX"/>
+                            <constraint firstItem="Qig-fz-GcQ" firstAttribute="leading" secondItem="VuL-eS-HQb" secondAttribute="leading" id="AVe-Uk-ZTK"/>
+                            <constraint firstItem="94Q-af-7rc" firstAttribute="centerX" secondItem="PM5-lu-PAg" secondAttribute="centerX" id="AsC-um-o1M"/>
+                            <constraint firstItem="VuL-eS-HQb" firstAttribute="top" secondItem="Qig-fz-GcQ" secondAttribute="bottom" constant="24" id="BUO-2o-3kE"/>
+                            <constraint firstItem="94Q-af-7rc" firstAttribute="trailing" secondItem="Qig-fz-GcQ" secondAttribute="trailing" id="PnY-EP-2NY"/>
+                            <constraint firstItem="Qig-fz-GcQ" firstAttribute="centerY" secondItem="PM5-lu-PAg" secondAttribute="centerY" id="RTy-pc-PGn"/>
+                            <constraint firstItem="94Q-af-7rc" firstAttribute="leading" secondItem="sar-Rj-BA4" secondAttribute="leading" constant="40" id="UH6-Gp-nix"/>
+                            <constraint firstItem="94Q-af-7rc" firstAttribute="leading" secondItem="Qig-fz-GcQ" secondAttribute="leading" id="eqO-IH-nKk"/>
+                            <constraint firstItem="Qig-fz-GcQ" firstAttribute="trailing" secondItem="VuL-eS-HQb" secondAttribute="trailing" id="mcE-oG-84y"/>
+                            <constraint firstItem="94Q-af-7rc" firstAttribute="top" secondItem="sar-Rj-BA4" secondAttribute="top" id="rFP-vC-n2q"/>
+                            <constraint firstItem="Qig-fz-GcQ" firstAttribute="top" secondItem="94Q-af-7rc" secondAttribute="bottom" constant="24" id="zUS-8X-H5b"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0RH-jz-DK8"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2X1-yb-oah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2310" y="881"/>
         </scene>
@@ -244,6 +294,9 @@
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="userPhotoOne" width="1344" height="1008"/>
+        <image name="userPhotoThree" width="1344" height="1008"/>
+        <image name="userPhotoTwo" width="240" height="320"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

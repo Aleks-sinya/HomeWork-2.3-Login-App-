@@ -13,19 +13,25 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
     // MARK: - Private properties
-    private let user = "User"
-    private let password = "Password"
+    private let logIn = LoginModel.getLogin()
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let greetingVC = segue.destination as? GreetingViewController else { return }
-        greetingVC.user = user
-    }
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
         
+        guard let greetingVC = tabBarController.viewControllers?.first as?
+                GreetingViewController else { return }
+        
+        greetingVC.userName = logIn.fullName
+    }
+    
     // MARK: - IBActions
     @IBAction func logInButtonPressed() {
-        guard userNameTextField.text == user, passwordTextField.text == password else {
+        guard userNameTextField.text == logIn.login,
+              passwordTextField.text == logIn.password
+        else {
             showAlert(
                 title: "Invalid login or password!",
                 message: "Please, enter correct login and password",
@@ -33,13 +39,13 @@ class LoginViewController: UIViewController {
             )
             return
         }
-        performSegue(withIdentifier: "openGreetingVC", sender: nil)
+        performSegue(withIdentifier: "openGreetingVC", sender: logIn.login)
     }
     
     @IBAction func showAuthorizationData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(user) 😉")
-        : showAlert(title: "Oops!", message: "Your password is \(password) 😉")
+        ? showAlert(title: "Oops!", message: "Your name is \(logIn.login) 😉")
+        : showAlert(title: "Oops!", message: "Your password is \(logIn.password) 😉")
     }
     
     @IBAction func unwindSegueToMainViewController(for segue: UIStoryboardSegue) {
@@ -50,8 +56,17 @@ class LoginViewController: UIViewController {
 
 // MARK: - Alert Controller
 extension LoginViewController {
-    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    private func showAlert(
+        title: String,
+        message: String,
+        textField: UITextField? = nil
+    )
+    {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""
         }
