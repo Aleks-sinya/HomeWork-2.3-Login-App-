@@ -15,16 +15,25 @@ class LoginViewController: UIViewController {
     
     
     // MARK: - Private properties
-    private let logIn = LoginModel.getLogin()
+    private let logIn = UserInfo.getUserInfo()
     
     // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
+        let viewControllers = tabBarController.viewControllers ?? []
         
-        guard let greetingVC = tabBarController.viewControllers?.first as?
-                GreetingViewController else { return }
+        for viewController in viewControllers {
+            if let greetingVC = viewController as? GreetingViewController {
+                greetingVC.userName = logIn.person.fullName
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let infoUser = navigationVC.topViewController as? AboutMeViewController else { return }
+                infoUser.user = logIn
+            }
+        }
         
-        greetingVC.userName = logIn.fullName
+        guard let greetingVC = segue.destination as? GreetingViewController else { return }
+        greetingVC.userName = userNameTextField.text
     }
     
     // MARK: - IBActions

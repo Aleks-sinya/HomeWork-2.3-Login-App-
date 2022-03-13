@@ -11,11 +11,14 @@ class AboutMeViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     
+    var user: UserInfo!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Aleksei Siniagovskii"
+        title = user.person.fullName
         
+        textView.text = user.person.description
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 16)
         textView.backgroundColor = self.view.backgroundColor
         textView.layer.cornerRadius = 12

@@ -178,15 +178,9 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61J-Co-0nd">
                                 <rect key="frame" x="-4" y="24" width="328" height="496"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5lq-6I-elt">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="User information" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5lq-6I-elt">
                                         <rect key="frame" x="20" y="20" width="288" height="456"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <mutableString key="text">Hello, my name is Alexey! I'm 28 years old. I'm from Barnaul, it's a small city in Siberia. Yes, it’s very cold here) I work for myself, we can say that we have a family business in the field of metrology, and to be more specific, this is more connected with heat energy meters. In fact, I am an engineer who manages a business, and in my free time I practice and at the same time teach the most difficult language in the world, this is Chinese. I really like teaching, because at this very moment you realize that you are helping people achieve certain goals and help a dream come true.
-I have been to China many times. Lived there, studied, worked.
-I learned Chinese because I am a very stubborn and purposeful person, so I decided to master the profession of a developer. Well, I chose the direction, because I really like the Apple company, its policy and, of course, devices.
-I love to travel very much, I have visited many countries of this world and it is impossible to say where it was best!
-I do a lot of reading books. Mostly I like literature about financial literacy.
-Another hobby of mine is, of course, sports, I won’t say that I am an athlete with gold medals, but I keep my body in good shape. </mutableString>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -231,7 +225,6 @@ Another hobby of mine is, of course, sports, I won’t say that I am an athlete 
         <!--View Controller-->
         <scene sceneID="Nij-GS-3TW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2X1-yb-oah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="g8T-lu-LiQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PM5-lu-PAg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -268,6 +261,7 @@ Another hobby of mine is, of course, sports, I won’t say that I am an athlete 
                     </view>
                     <navigationItem key="navigationItem" id="0RH-jz-DK8"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2X1-yb-oah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2310" y="881"/>
         </scene>
