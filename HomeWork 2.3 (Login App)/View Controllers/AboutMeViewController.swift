@@ -24,4 +24,10 @@ class AboutMeViewController: UIViewController {
         textView.layer.cornerRadius = 12
         textView.isEditable = false
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let imageVC = segue.destination as? ImageViewController else { return }
+        imageVC.user = user
+    }
+    
 }

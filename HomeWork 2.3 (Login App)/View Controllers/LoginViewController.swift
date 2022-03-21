@@ -18,10 +18,9 @@ class LoginViewController: UIViewController {
     private let logIn = UserInfo.getUserInfo()
     
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
-        let viewControllers = tabBarController.viewControllers ?? []
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
         for viewController in viewControllers {
             if let greetingVC = viewController as? GreetingViewController {
@@ -85,7 +84,6 @@ extension LoginViewController {
 }
 
 // MARK: - Keyboard
-
 extension LoginViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
